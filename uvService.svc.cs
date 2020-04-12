@@ -19,7 +19,9 @@ namespace uvInfoService
         {
             double uvTotal = 0, uvAverage;
 
-            string url = @"https://api.weatherbit.io/v2.0/forecast/daily?postal_code=" + zipcode + "&country=US&key=1fba9f0728054cfe901e9574a75617d9";
+            // *** api key removed from github due to privacy reasons
+            // api key would go at the end of the url link***
+            string url = @"https://api.weatherbit.io/v2.0/forecast/daily?postal_code=" + zipcode + "&country=US&key=";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             WebResponse response = request.GetResponse();
