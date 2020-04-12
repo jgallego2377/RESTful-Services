@@ -20,7 +20,9 @@ namespace WebServices
             // url is the one to use when the service is deployed
             // dummy url is a test url
 
-            string url = @"https://cloud.iexapis.com/stable/stock/" + symbol + "/chart/1m?token=pk_9a8773f364654b7baa1c5c4ade676a3a";
+            // *** api key removed from github due to privacy reasons
+            // api key would go at the end of the url link***
+            string url = @"https://cloud.iexapis.com/stable/stock/" + symbol + "/chart/1m?token=";
             //string dummyUrl = @"https://sandbox.iexapis.com/stable/stock/" + symbol + "/chart/1m?token=Tsk_6fb5a6b8c4c44cdc8bcf370f6b7d6a2b";
 
             // Gets a JSON response from the URL above
