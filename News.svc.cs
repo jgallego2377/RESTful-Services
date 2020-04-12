@@ -19,7 +19,9 @@ namespace WebServices
             //cnbc, bbc-news, cbs-news, fox-news, cnn, reuters, abc-news, nbc-news
             List<NewsArticle> objNewsData = new List<NewsArticle>();
 
-            string url = @"https://newsapi.org/v2/top-headlines?sources=" + domain + "&apiKey=f1e76ec74a5a49ddab8bd0b213bd6e3b";
+            // api key removed from github due to privacy reasons
+            // api key would go at the end of the url link
+            string url = @"https://newsapi.org/v2/top-headlines?sources=" + domain + "&apiKey=";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             WebResponse response = request.GetResponse();
             Stream dataStream = response.GetResponseStream();
@@ -52,7 +54,9 @@ namespace WebServices
         {
             List<NewsArticle> objNewsData = new List<NewsArticle>();
 
-            string url = @"https://newsapi.org/v2/top-headlines?language=en&q=" + topic + "&apiKey=f1e76ec74a5a49ddab8bd0b213bd6e3b";
+            // api key removed from github due to privacy reasons
+            // api key would go at the end of the url link
+            string url = @"https://newsapi.org/v2/top-headlines?language=en&q=" + topic + "&apiKey=";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             WebResponse response = request.GetResponse();
             Stream dataStream = response.GetResponseStream();
@@ -85,7 +89,9 @@ namespace WebServices
         {
             List<NewsArticle> objNewsData = new List<NewsArticle>();
 
-            string url = @"https://newsapi.org/v2/top-headlines?country=" + location + "&apiKey=f1e76ec74a5a49ddab8bd0b213bd6e3b";
+            // api key removed from github due to privacy reasons
+            // api key would go at the end of the url link
+            string url = @"https://newsapi.org/v2/top-headlines?country=" + location + "&apiKey=";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             WebResponse response = request.GetResponse();
             Stream dataStream = response.GetResponseStream();
