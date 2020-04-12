@@ -9,10 +9,12 @@ using System.Web;
 
 namespace WebServices
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IStockInfoService" in both code and config file together.
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IstocksService" in both code and config file together.
     [ServiceContract]
-    public interface IStockInfoService
+    public interface IstocksService
     {
+        // method allows the user to see averages of their specified company's stock
+        // price for a certain 7 - 21 day period 
         [OperationContract]
         [WebGet(UriTemplate = "stockinfo/{symbol}/{days}",
             RequestFormat = WebMessageFormat.Json,
@@ -21,6 +23,7 @@ namespace WebServices
         List<StockReturn> stockinfo(string symbol, string days);
     }
 
+    // basic structure of our JSON response
     public class StockReturn
     {
         public string name { get; set; }
